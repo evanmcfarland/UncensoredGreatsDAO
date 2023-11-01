@@ -14,7 +14,7 @@
 
 
 import React, { useContext, createContext } from 'react';
-import '../styles/Scaler.css'
+import '@/styles/Scaler.css'
 
 const ScaleContext = createContext(1);
 

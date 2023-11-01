@@ -1,9 +1,9 @@
 import React from 'react';
 import BookCards from '../BookCards';
 import { CardBackProps } from './types';
-import '../../../styles/MessageCard/CardBack.css';
-import useAuthorBooks from '../../../utils/useAuthorBooks';
-import { useSettings } from '../../contexts/SettingsContext';
+import '@/styles/MessageCard/CardBack.css';
+import useAuthorBooks from '@/utils/useAuthorBooks';
+import { useSettings } from '@/contexts/SettingsContext';
 
 
 const CardBack: React.FC<CardBackProps> = ({ currentAuthorId }) => {

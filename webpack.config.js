@@ -10,6 +10,7 @@ const isDevelopment = process.env.NODE_ENV !== "production";
 const frontendDirectory = "ugd_frontend";
 
 const frontend_entry = path.join("src", frontendDirectory, "src", "index.html");
+// will always be an index.js file because of the replace down
 
 module.exports = {
   target: "web",
@@ -30,6 +31,9 @@ module.exports = {
       events: require.resolve("events/"),
       stream: require.resolve("stream-browserify/"),
       util: require.resolve("util/"),
+    },
+    alias: {
+      '@': path.resolve(__dirname, 'src', frontendDirectory, 'src'),
     },
   },
   output: {
@@ -79,7 +83,7 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, frontend_entry),
+      template: path.join(__dirname, "src", frontendDirectory, "public", "index.html"),
       cache: false,
     }),
     new webpack.EnvironmentPlugin([
@@ -96,7 +100,7 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         {
-          from: `src/${frontendDirectory}/src/.ic-assets.json*`,
+          from: `src/${frontendDirectory}/src/data/.ic-assets.json*`,
           to: ".ic-assets.json5",
           noErrorOnMissing: true,
         },
@@ -114,9 +118,9 @@ module.exports = {
         },
       },
     },
-    static: path.resolve(__dirname, "src", frontendDirectory, "assets"),
+    static: path.resolve(__dirname, "src", frontendDirectory, "public"),
     hot: true,
-    watchFiles: [path.resolve(__dirname, "src", frontendDirectory)],
+    watchFiles: [path.resolve(__dirname, "src", frontendDirectory, "src")],
     liveReload: true,
   },
 };
