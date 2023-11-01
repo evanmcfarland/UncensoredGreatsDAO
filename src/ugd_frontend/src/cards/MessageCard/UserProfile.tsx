@@ -1,9 +1,9 @@
 import React from 'react'
-import RatingCard from '@/RatingCard/RatingCard'
+import RatingCard from '../../RatingCard/RatingCard'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faComment, faFlag, faHeart, faStar } from '@fortawesome/free-solid-svg-icons';
 import { UserProfileInterface } from './types';
-import { useAuthors } from '@/contexts/AuthorContext';
+import { useAuthors } from '../../contexts/AuthorContext';
 
 const UserProfile: React.FC<UserProfileInterface> = ({ currentAuthorId, InputMessage }) => {
   const { authors } = useAuthors();
@@ -20,7 +20,7 @@ const UserProfile: React.FC<UserProfileInterface> = ({ currentAuthorId, InputMes
       <div className="messageCardAuthorProfile">
         <div className="messageCardUserProfile">
           <div className="messageUserProfileImg">
-            <img src={`/images/authrs/${author.id}.png`} alt="" />
+            <img src={`/images/authors/${author.id}.png`} alt="" />
           </div>
           <div className="userAuthorProfile">
             <h2>{author.id}</h2>

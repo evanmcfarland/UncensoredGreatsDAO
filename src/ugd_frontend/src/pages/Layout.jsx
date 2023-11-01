@@ -7,7 +7,7 @@ import Share from './Share';
 import Post from './Post';
 import Author from './Author';
 import NotFound from "./NotFound";
-import '@/styles/main.css';
+import '../styles/main.css';
 
 const Layout = () => {
     return (

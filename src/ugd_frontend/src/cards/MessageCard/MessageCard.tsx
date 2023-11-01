@@ -1,8 +1,8 @@
 import React, { useState, useContext } from 'react';
-import '@/styles/MessageCard/MessageCard.css';
+import '../../styles/MessageCard/MessageCard.css';
 import CardFront from './CardFront';
 import CardBack from './CardBack';
-import MessageContext from '@/contexts/MessageContext';
+import MessageContext from '../../contexts/MessageContext';
 import UserProfile from './UserProfile';
 import DetailsHeader from './DetailsHeader';
 import CardDetailsFront from './CardDetailsFront';

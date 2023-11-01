@@ -1,6 +1,6 @@
 // OG: Now makes author object from pure AUTHOR_INFO
 import React, { createContext, useContext, ReactNode, useState } from 'react';
-import { Author, AUTHOR_INFO } from '@/data/author_data';
+import { Author, AUTHOR_INFO } from '../data/author_data';
 
 interface AuthorContextProps {
   authors: Author[];

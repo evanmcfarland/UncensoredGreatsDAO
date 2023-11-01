@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useMemo, useRef } from 'react';
-import AuthorCard from '@/cards/AuthorCard';
+import AuthorCard from '../cards/AuthorCard';
 import { Responsive, WidthProvider } from 'react-grid-layout';
-import Shelf from '@/components/Author/Shelf';
-import Stats from '@/components/Author/Stats';
-import { useAuthors } from '@/contexts/AuthorContext';
+import Shelf from '../components/Author/Shelf';
+import Stats from '../components/Author/Stats';
+import { useAuthors } from '../contexts/AuthorContext';
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
-import '@/styles/react-grid-layout.css'
+import '../styles/react-grid-layout.css'
 
 function AuthorPanel({ authors }) {
 	const { stats, shelf } = useAuthors();

@@ -1,20 +1,5 @@
-// import React from 'react';
-// import '../../styles/Scaler.css'
-
-// function Scaler(props) {
-//   return (
-//     <div className="scaler">
-//       {props.children}
-//     </div>
-//   );
-// }
-
-// export default Scaler;
-
-
-
 import React, { useContext, createContext } from 'react';
-import '@/styles/Scaler.css'
+import '../styles/Scaler.css'
 
 const ScaleContext = createContext(1);
 

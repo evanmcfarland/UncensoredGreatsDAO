@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
-import '@/styles/AuthorStats.css';
-import { useAuthors } from '@/contexts/AuthorContext';
+import '../../styles/AuthorStats.css';
+import { useAuthors } from '../../contexts/AuthorContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 

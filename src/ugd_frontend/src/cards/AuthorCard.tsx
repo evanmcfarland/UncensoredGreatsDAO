@@ -1,8 +1,8 @@
 import React, { useState, useEffect, Dispatch, SetStateAction } from 'react';
 import { Link } from "react-router-dom";
-import useStreamingText from '@/utils/Stream';
-import '@/styles/AuthorCard.css';
-import { useAuthors } from '@/contexts/AuthorContext';
+import useStreamingText from '../utils/Stream';
+import '../styles/AuthorCard.css'
+import { useAuthors } from '../contexts/AuthorContext';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar, faRepeat, faRotateLeft, faArrowDown, faArrowUp } from '@fortawesome/free-solid-svg-icons';

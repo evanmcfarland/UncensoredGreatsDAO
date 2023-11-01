@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { useAuthors } from '@/contexts/AuthorContext';
-import { Book } from '@/cards/MessageCard/types';
+import { useAuthors } from '../contexts/AuthorContext';
+import { Book } from '../cards/MessageCard/types';
 import { sanitizeTitleForPath } from './handleReadBookClick';
 
 const useAuthorBooks = (authorId: string) => {

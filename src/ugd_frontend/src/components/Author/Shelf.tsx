@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from 'react';
-import '@/styles/AuthorShelf.css';
-import BookCards from "@/cards/BookCards";
-import useAuthorBooks from '@/utils/useAuthorBooks';
-import { useAuthors } from '@/contexts/AuthorContext';
+import '../../styles/AuthorShelf.css';
+import BookCards from "../../cards/BookCards";
+import useAuthorBooks from '../../utils/useAuthorBooks';
+import { useAuthors } from '../../contexts/AuthorContext';
 
 const Shelf = () => {
 	const { shelf } = useAuthors();

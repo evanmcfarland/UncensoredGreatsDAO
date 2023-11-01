@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import BookCard from './BookCard';
-import useStreamingText from '@/utils/Stream';
-import { handleReadBookClick } from '@/utils/handleReadBookClick';
-import { useAuthors } from '@/contexts/AuthorContext';
+import useStreamingText from '../utils/Stream';
+import { handleReadBookClick } from '../utils/handleReadBookClick';
+import { useAuthors } from '../contexts/AuthorContext';
 
 interface BookCardsProps {
   book: {
