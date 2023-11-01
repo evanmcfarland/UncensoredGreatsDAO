@@ -83,7 +83,7 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, "src", frontendDirectory, "assets", "index.html"),
+      template: path.join(__dirname, "src", frontendDirectory, "src", "index.html"),
       cache: false,
     }),
     new webpack.EnvironmentPlugin([
