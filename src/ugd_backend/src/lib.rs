@@ -1,14 +1,8 @@
-// ToDo // Not urgent
-// Persisted counter. I can use this guide, and use the initialization number as 1+ the last post# https://internetcomputer.org/docs/current/developer-docs/backend/rust/counter
-// Learn VirtualMemory vs. MemoryManager
+mod source_cards;
+pub use source_cards::{save_sc, bookmark_sc, delete_sc, get_sc, get_bookmarks};
 
 mod weaviate;
-
-use candid::{CandidType, Deserialize, Encode, Decode};
-use ic_stable_structures::memory_manager::{MemoryId, MemoryManager, VirtualMemory};
-use ic_stable_structures::{storable::Bound, DefaultMemoryImpl, StableBTreeMap, Storable};
-use std::{borrow::Cow, cell::RefCell};
-use std::sync::atomic::{AtomicUsize, Ordering};
+pub use weaviate::get_weaviate_query;
 
 
 // Start of real SourceCard Backend.
